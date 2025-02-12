@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de Apresentação de Mercadorias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen" class="screen">
+        <h1>Bem-vindo ao Quiz!</h1>
+        <p>Teste seus conhecimentos sobre formas de apresentação de mercadorias, produtos e serviços!</p>
+        <button id="start-btn" onclick="startGame()">Começar</button>
+    </div>
+    
+    <div id="game-screen" class="screen" style="display: none;">
+        <h1>Quiz</h1>
+        <div class="question-container">
+            <p id="question"></p>
+        </div>
+        <div class="options-container">
+            <button class="option" onclick="checkAnswer(0)"></button>
+            <button class="option" onclick="checkAnswer(1)"></button>
+            <button class="option" onclick="checkAnswer(2)"></button>
+            <button class="option" onclick="checkAnswer(3)"></button>
+        </div>
+        <div id="score-container">
+            <p>Pontuação: <span id="score">0</span></p>
+        </div>
+        <div id="timer-container">
+            <p>Tempo restante: <span id="timer">25</span> segundos</p>
+        </div>
+        <div id="result-container">
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <div id="end-screen" class="screen" style="display: none;">
+        <h1>Parabéns!</h1>
+        <p id="final-score">Sua pontuação final é: 0</p>
+        <button onclick="restartGame()">Jogar Novamente</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
